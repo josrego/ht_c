@@ -11,7 +11,7 @@ SRCS = src/main.c src/hash_table.c src/prime.c
 HEADERS = src/hash_table.h src/prime.h
 
 # Output executable
-TARGET = build/main
+TARGET = main
 
 # Build target
 $(TARGET): $(SRCS) $(HEADERS)
