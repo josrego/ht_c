@@ -1,2 +1,3 @@
 # ht_c
-HashTable implementation in C
+
+This was just a small exercise for reminding how to program in C.
