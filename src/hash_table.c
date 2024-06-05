@@ -41,7 +41,6 @@ void ht_del_hash_table(ht_hash_table *ht) {
   for (int i = 0; i < ht->size; i++) {
     ht_item *item = ht->items[i];
     if (item != NULL && item != &HT_DELETED_ITEM) {
-      printf("deleting %s: %s", item->key, item->value);
       ht_del_item(item);
     }
   }
@@ -73,6 +72,7 @@ static int ht_get_hash(const char *s, const int num_buckets,
 
 // Resize functions
 static void ht_resize(ht_hash_table *ht, const int base_size) {
+  printf("\n\nResizing to base_size %d\n\n", base_size);
   if (base_size < HT_INITIAL_BASE_SIZE) {
     return;
   }
